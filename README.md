@@ -1,14 +1,14 @@
-# Global Predictability of Marine Heatwave-Induced Rapid Intensification of Tropical Cyclones
+# Synergistic Impact of Marine Heatwaves and Rapid Intensification Exacerbates Tropical Cyclone Destructive Power Worldwide
 
-This repository contains Python scripts developed for the analysis and prediction of marine heatwave-induced rapid intensification (RI) of tropical cyclones (TCs) using a global machine learning (ML) approach. The study aims to improve RI forecasts by integrating marine heatwave (MHW) characteristics into predictive models. The results and methods are detailed in the manuscript: *Global Predictability of Marine Heatwave-Induced Rapid Intensification of Tropical Cyclones*.
+This repository contains Python scripts developed for the analysis presented in the Science Advances paper titled *"Synergistic impact of marine heatwaves and rapid intensification exacerbates tropical cyclone destructive power worldwide."* The scripts support statistical, geospatial, and machine learning analyses to investigate the compounding effects of marine heatwaves (MHWs) and rapid intensification (RI) on tropical cyclone (TC) hazards and damages.
 
 ## Cite
 
 If you use the codes, data, ideas, or results from this project, please cite the following paper:
 
-**Radfar, S., Foroumandi, E., Moftakhari, H., Moradkhani, H., Sen Gupta, A., and Foltz, G. (2024). Global predictability of marine heatwave-induced rapid intensification of tropical cyclones. Earth’s Future.**
+**Radfar, S., Foroumandi, E., Moftakhari, H., Moradkhani, H., Sen Gupta, A., and Foltz, G. (2024). Synergistic impact of marine heatwaves and rapid intensification exacerbates tropical cyclone destructive power worldwide. Science Advances.**
 
-- **Link to the Published Paper:** [Earth’s Future Journal](https://doi.org/10.1029/xxxxxxx)
+- **DOI Link:** [https://doi.org/10.1126/sciadv.adkxxxx](https://doi.org/10.1126/sciadv.adkxxxx) *(placeholder)*
 
 ## Table of Contents
 
@@ -24,7 +24,7 @@ If you use the codes, data, ideas, or results from this project, please cite the
 
 ## Installation
 
-To run the code in this repository, you'll need to have the following dependencies installed:
+To run the code in this repository, you'll need the following dependencies:
 
 ### Python Dependencies
 - Python 3.7 or higher
@@ -35,18 +35,21 @@ To run the code in this repository, you'll need to have the following dependenci
 - Imbalanced-learn
 - XGBoost
 - LightGBM
-- Joblib
 - SHAP
-- Basemap
+- Statsmodels
+- TQDM
+- Seaborn
+- Cartopy (for maps)
+- Basemap (legacy map support)
 
-You can install the required Python packages using pip:
+Install all dependencies using pip:
 ```bash
-pip install numpy pandas matplotlib scikit-learn imbalanced-learn xgboost lightgbm joblib shap basemap
+pip install numpy pandas matplotlib scikit-learn imbalanced-learn xgboost lightgbm shap statsmodels tqdm seaborn cartopy basemap
 ```
 
 ## Usage
 
-Each script file has a description on top that clearly describes the objectives of that code and expected outputs.
+Each Python script includes a full header that clearly describes the objectives, outputs, and context within the study. Please refer to those for individual script details.
 
 ## File Structure
 ```bash
@@ -58,27 +61,54 @@ Each script file has a description on top that clearly describes the objectives 
 
 ## Data
 
-All data supporting the findings of this study are publicly accessible and available for download. The analysis covers the time period from September 1, 1981, to October 19, 2023. The datasets used include:
+The study integrates multiple global datasets from publicly available sources:
 
-1. **Tropical Cyclone Best Track Data**:
-   - TC best track data were obtained from the **International Best Track Archive for Climate Stewardship (IBTrACS)** dataset (Knapp et al., 2018). This dataset is freely available in CSV format through the National Centers for Environmental Information (NCEI) website. Access the data here: [IBTrACS CSV Format](https://www.ncei.noaa.gov/data/international-best-track-archive-for-climate-stewardship-ibtracs/v04r00/access/csv/).
+1. **Tropical Cyclone Best Track Data (IBTrACS)**  
+   Source: NOAA NCEI  
+   Format: CSV (3-hourly resolution, global coverage)  
+   Access: [https://www.ncei.noaa.gov/data/international-best-track-archive-for-climate-stewardship-ibtracs/v04r00/access/csv/](https://www.ncei.noaa.gov/data/international-best-track-archive-for-climate-stewardship-ibtracs/v04r00/access/csv/)
 
-2. **Sea Surface Temperature (SST) Data**:
-   - SST data were sourced from the **NOAA Optimum Interpolation Sea Surface Temperature (OISST) version 2.1** dataset (Huang et al., 2021). The dataset is provided in NetCDF format and can be accessed through the ERDDAP data server. Access the data here: [NOAA OISST v2.1](https://www.ncei.noaa.gov/erddap/info/index.html?page=1&itemsPerPage=1000).
+2. **Sea Surface Temperature (OISST v2.1)**  
+   Source: NOAA ERDDAP  
+   Format: NetCDF  
+   Access: [https://www.ncei.noaa.gov/erddap/info/index.html](https://www.ncei.noaa.gov/erddap/info/index.html)
 
-These datasets are publicly available, ensuring the transparency and reproducibility of the results presented in this study.
+3. **Precipitation (ERA5)**  
+   Source: ECMWF Copernicus Climate Data Store  
+   Format: Reanalysis at 0.25° spatial resolution  
+   Access: [https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-era5-single-levels](https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-era5-single-levels)
+
+4. **Economic Loss Data (EM-DAT)**  
+   Source: Emergency Events Database  
+   Access: [https://www.emdat.be/](https://www.emdat.be/)
+
+5. **Built-Up Volume Data (GHSL)**  
+   Source: Copernicus Emergency Management Service  
+   Format: 30 arcsecond global raster grids (1980–2025)  
+   Access: [https://human-settlement.emergency.copernicus.eu/download.php](https://human-settlement.emergency.copernicus.eu/download.php)
 
 ## Results
-The main output of this analysis is a set of visualizations and machine learning models examining the impact of marine heatwaves on the rapid intensification of tropical cyclones globally. The results are provided in the cited manuscript.
+
+The repository contains figures and models supporting all key results in the manuscript, including:
+- Marine heatwave trends
+- RI onset statistics
+- Basin-level ML performance
+- Cost quantile regressions
+- Copula-based risk visualizations
+- Predictor importance via SHAP
 
 ## Contributing
-Contributions to this project are welcome. If you find any issues or have suggestions for improvements, please open an issue or submit a pull request.
+
+Contributions are welcome. Please open an issue or submit a pull request for improvements or questions.
 
 ## License
+
 This project is licensed under the Apache License.
 
 ## Acknowledgments
-This research is supported by the Coastal Hydrology Lab and the Center for Complex Hydrosystems Research at the University of Alabama. Funding was awarded to Cooperative Institute for Research to Operations in Hydrology (CIROH) through the NOAA Cooperative Agreement with The University of Alabama (NA22NWS4320003). Partial support was also provided by NSF award # 2223893.
+
+This research is supported by the Coastal Hydrology Lab and the Center for Complex Hydrosystems Research at the University of Alabama. Funding was awarded to Cooperative Institute for Research to Operations in Hydrology (CIROH) through the NOAA Cooperative Agreement with The University of Alabama (NA22NWS4320003). Partial support was also provided by NSF award #2223893.
 
 ## Contact
-For any questions or inquiries, please contact the project maintainer at [sradfar@ua.edu].
+
+For questions, please contact Soheil Radfar at [sradfar@ua.edu].
