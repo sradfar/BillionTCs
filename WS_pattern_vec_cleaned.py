@@ -66,7 +66,7 @@ nri = pd.read_csv(NON_RI_CSV)
 # --- replicate your original filters ---------------------------------
 ri  = ri[ ri['land'] == 1 ].copy()
 
-nri = nri[ (nri['land'] == 1) | (nri['land'] == 10) ].copy()
+nri = nri[ nri['land'] == 1].copy()
 
 # --- four sub‑groups --------------------------------------------------
 ri_mhw        = ri[  (ri['MHW_land']==1) & (ri['mhw_hours'] > 48) ]
