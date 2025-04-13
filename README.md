@@ -6,7 +6,7 @@ This repository contains Python scripts developed for the analysis presented in 
 
 If you use the codes, data, ideas, or results from this project, please cite the following paper:
 
-**Radfar, S., Foroumandi, E., Moftakhari, H., Moradkhani, H., Sen Gupta, A., and Foltz, G. (2024). Synergistic impact of marine heatwaves and rapid intensification exacerbates tropical cyclone destructive power worldwide. Science Advances.**
+**Radfar, S., Foroumandi, E., Moftakhari, H., Moradkhani, H., Sen Gupta, A., and Foltz, G. (2025). Synergistic impact of marine heatwaves and rapid intensification exacerbates tropical cyclone destructive power worldwide. Science Advances.**
 
 - **DOI Link:** [https://doi.org/10.1126/sciadv.adkxxxx](https://doi.org/10.1126/sciadv.adkxxxx) *(placeholder)*
 
