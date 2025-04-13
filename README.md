@@ -6,7 +6,7 @@ This repository contains Python scripts developed for the analysis presented in 
 
 If you use the codes, data, ideas, or results from this project, please cite the following paper:
 
-**Radfar, S., Foroumandi, E., Moftakhari, H., Moradkhani, H., Sen Gupta, A., and Foltz, G. (2025). Synergistic impact of marine heatwaves and rapid intensification exacerbates tropical cyclone destructive power worldwide. Science Advances.**
+**Radfar, S., Foroumandi, E., Moftakhari, H., Moradkhani, H., Sen Gupta, A., and Foltz, G. (2024). Synergistic impact of marine heatwaves and rapid intensification exacerbates tropical cyclone destructive power worldwide. Science Advances.**
 
 - **DOI Link:** [https://doi.org/10.1126/sciadv.adkxxxx](https://doi.org/10.1126/sciadv.adkxxxx) *(placeholder)*
 
@@ -28,23 +28,22 @@ To run the code in this repository, you'll need the following dependencies:
 
 ### Python Dependencies
 - Python 3.7 or higher
-- NumPy
-- Pandas
-- Matplotlib
-- Scikit-learn
-- Imbalanced-learn
-- XGBoost
-- LightGBM
-- SHAP
-- Statsmodels
-- TQDM
-- Seaborn
-- Cartopy (for maps)
-- Basemap (legacy map support)
+- numpy
+- pandas
+- matplotlib
+- scikit-learn
+- imbalanced-learn
+- xgboost
+- shap
+- statsmodels
+- tqdm
+- seaborn
+- cartopy
+- basemap-python
 
 Install all dependencies using pip:
 ```bash
-pip install numpy pandas matplotlib scikit-learn imbalanced-learn xgboost lightgbm shap statsmodels tqdm seaborn cartopy basemap
+pip install numpy pandas matplotlib scikit-learn imbalanced-learn xgboost lightgbm shap statsmodels tqdm seaborn cartopy basemap-python
 ```
 
 ## Usage
@@ -90,12 +89,13 @@ The study integrates multiple global datasets from publicly available sources:
 ## Results
 
 The repository contains figures and models supporting all key results in the manuscript, including:
-- Marine heatwave trends
-- RI onset statistics
-- Basin-level ML performance
-- Cost quantile regressions
-- Copula-based risk visualizations
-- Predictor importance via SHAP
+
+- Marine heatwave trends  
+- RI onset statistics  
+- Basin-level machine learning performance  
+- Cost quantile regressions  
+- Copula-based TC risk visualizations  
+- Predictor importance analysis using SHAP  
 
 ## Contributing
 
@@ -103,7 +103,7 @@ Contributions are welcome. Please open an issue or submit a pull request for imp
 
 ## License
 
-This project is licensed under the Apache License.
+This project is licensed under the MIT License.
 
 ## Acknowledgments
 
