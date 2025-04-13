@@ -43,7 +43,7 @@ To run the code in this repository, you'll need the following dependencies:
 
 Install all dependencies using pip:
 ```bash
-pip install numpy pandas matplotlib scikit-learn imbalanced-learn xgboost lightgbm shap statsmodels tqdm seaborn cartopy basemap-python
+pip install numpy pandas matplotlib scikit-learn imbalanced-learn xgboost shap statsmodels tqdm seaborn cartopy basemap-python
 ```
 
 ## Usage
@@ -92,7 +92,6 @@ The repository contains figures and models supporting all key results in the man
 
 - Marine heatwave trends  
 - RI onset statistics  
-- Basin-level machine learning performance  
 - Cost quantile regressions  
 - Copula-based TC risk visualizations  
 - Predictor importance analysis using SHAP  
